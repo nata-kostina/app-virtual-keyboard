@@ -8,7 +8,7 @@ class Keyboard extends AbstractElement {
 	}
 	draw() {
 		
-		const container = body.querySelector('.container');
+		const container = body.querySelector('.main__inner');
 		if (container) { this.drawElement({ container: container, place: `beforeend` }); }
 	}
 }

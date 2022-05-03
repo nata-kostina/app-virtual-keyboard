@@ -1,0 +1,11 @@
+.textarea {
+	width: 100%;
+	margin-bottom: 15px;
+ 
+	resize: none;
+
+	&:focus {
+		outline: none !important;
+	 }
+ }
+ 

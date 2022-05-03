@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/styles/style.scss":
+/*!*******************************!*\
+  !*** ./src/styles/style.scss ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/styles/style.scss?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_App_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/App.class */ \"./src/js/App.class.js\");\n\r\nconst app = new _js_App_class__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\napp.init();\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_App_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/App.class */ \"./src/js/App.class.js\");\n/* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/style.scss */ \"./src/styles/style.scss\");\n\r\n\r\nconst app = new _js_App_class__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\napp.init();\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/index.js?");
 
 /***/ }),
 
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AbstractElement.class */ \"./src/js/AbstractElement.class.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./src/js/constants.js\");\n\r\n\r\nclass Keyboard extends _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\tconstructor() {\r\n\t\tsuper()\r\n\t\tthis.createElement({ tag: 'div' });\r\n\t\tthis.addClass('keyboard');\r\n\t}\r\n\tdraw() {\r\n\t\t\r\n\t\tconst container = _constants__WEBPACK_IMPORTED_MODULE_1__.body.querySelector('.container');\r\n\t\tif (container) { this.drawElement({ container: container, place: `beforeend` }); }\r\n\t}\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Keyboard);\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/js/Keyboard.class.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AbstractElement.class */ \"./src/js/AbstractElement.class.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./src/js/constants.js\");\n\r\n\r\nclass Keyboard extends _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\tconstructor() {\r\n\t\tsuper()\r\n\t\tthis.createElement({ tag: 'div' });\r\n\t\tthis.addClass('keyboard');\r\n\t}\r\n\tdraw() {\r\n\t\t\r\n\t\tconst container = _constants__WEBPACK_IMPORTED_MODULE_1__.body.querySelector('.main__inner');\r\n\t\tif (container) { this.drawElement({ container: container, place: `beforeend` }); }\r\n\t}\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Keyboard);\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/js/Keyboard.class.js?");
 
 /***/ }),
 
@@ -56,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AbstractElement.class */ \"./src/js/AbstractElement.class.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./src/js/constants.js\");\n\r\n\r\nclass Layout extends _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\tconstructor() {\r\n\t\tsuper()\r\n\t\tthis.createElement({tag: 'main', value: `\r\n\t\t<div class=\"container\">\r\n\t\t<h1 class=\"title\">Virtual Keyboard</h1>\r\n\t\t<p class=\"info\">Information</p>\r\n\t\t<textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\" className=\"textarea\"\t\r\n\t\tautocomplete= \"off\" autofocus readonly placeholder= 'Enter text...'></textarea>\r\n\t\t</div>\r\n\t\t\r\n\t\t`});\t\r\n\t\tthis.addClass('layout');\r\n\t}\r\n\r\n\tdraw() {\r\n\t\tthis.drawElement({container: _constants__WEBPACK_IMPORTED_MODULE_1__.body, place: 'afterbegin'});\r\n\t}\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/js/Layout.class.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AbstractElement.class */ \"./src/js/AbstractElement.class.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./src/js/constants.js\");\n\r\n\r\nclass Layout extends _AbstractElement_class__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\tconstructor() {\r\n\t\tsuper()\r\n\t\tthis.createElement({\r\n\t\t\ttag: 'main', value: `\r\n\t\t<div class=\"container\">\r\n\t\t<div class=\"main__inner\">\r\n\t\t<h1 class=\"title\">Virtual Keyboard</h1>\r\n\t\t<p class=\"info\">Information</p>\r\n\t\t<textarea name=\"textarea\" cols=\"30\" rows=\"10\" className=\"textarea\"\t\r\n\t\tautocomplete= \"off\" autofocus readonly placeholder= 'Enter text...'></textarea>\r\n\t\t</div>\r\n\t\t</div>\r\n\t\t\r\n\t\t`});\r\n\t\tthis.addClass('main');\r\n\t}\r\n\r\n\tdraw() {\r\n\t\tthis.drawElement({ container: _constants__WEBPACK_IMPORTED_MODULE_1__.body, place: 'afterbegin' });\r\n\t}\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n\n//# sourceURL=webpack://app-virtual-keyboard/./src/js/Layout.class.js?");
 
 /***/ }),
 

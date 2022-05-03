@@ -1,8 +1,8 @@
-$red-color: red;
-
-
-.box {
-	height: 100px;
-	width: 100px;
-	background-color: $red-color;
-}
+@import "./normalize";
+@import "./constants";
+@import "./base";
+@import "./container";
+@import "./main";
+@import "./key";
+@import "./keyboard";
+@import "./textarea";
