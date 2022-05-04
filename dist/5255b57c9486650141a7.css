@@ -340,13 +340,23 @@ template {
   display: none;
 }
 
+@font-face {
+  src: url(ac98a5f5ca71180fe293.ttf);
+  font-family: "Montserrat";
+  font-weight: 400;
+}
 body {
-  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
 }
 
 h1 {
   font-size: 3rem;
   color: red;
+}
+
+p {
+  font-size: 2.5rem;
 }
 
 .container {
@@ -363,36 +373,72 @@ h1 {
   justify-content: center;
 }
 
-.button {
-  min-width: 40px;
-  height: 40px;
-  margin: 2px;
+button {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  margin: 3px;
+  padding: 0 10px;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.075);
   border: none;
   border: 1px solid #089FFF;
   border-radius: 4px;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: 0.4s;
 }
-.button:hover {
+button:hover {
   background-color: rgba(187, 198, 233, 0.726);
 }
-.button:active {
+button:active {
   transform: translateY(4px);
+}
+
+.key.active:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #089FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+}
+.key:active {
+  transform: translateY(4px);
+  background-color: #089fff;
+}
+.key[data-type=arrow] {
+  font-family: "Arial", sans-serif;
+}
+.key[data-type=backspace], .key[data-type=tab], .key[data-type=enter], .key[data-type=capslock], .key[data-type=shift], .key[data-type=space] {
+  flex-grow: 1;
+}
+.key[data-type=tab], .key[data-type=capslock], .key[data-type=shift_left] {
+  text-align: left;
+}
+.key[data-type=backspace], .key[data-type=enter], .key[data-type=shift_right] {
+  text-align: right;
 }
 
 .keyboard {
   padding: 8px 5px;
   display: flex;
-  flex-direction: column;
   text-transform: uppercase;
   background-color: #102338;
   border-radius: 5px;
+  width: 1100px;
+  flex-wrap: wrap;
+}
+.keyboard .row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 100%;
 }
 
 .textarea {
-  width: 100%;
+  width: 1000px;
   margin-bottom: 15px;
   resize: none;
 }

@@ -1,7 +1,7 @@
 .keyboard {
 	padding: 8px 5px;
 	display: flex;
-	flex-direction: column;
+//	flex-direction: column;
 
 	//flex-basis: 100%;
  
@@ -9,4 +9,14 @@
  
 	background-color: $color-dark-m;
 	border-radius: 5px;
+
+	width: 1100px;
+	flex-wrap: wrap;
+
+	.row {
+		display: flex;
+		flex-wrap: nowrap;
+
+		flex-basis: 100%;
+	}
  }
