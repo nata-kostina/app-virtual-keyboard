@@ -9,7 +9,8 @@ export const state = {
 	pointerEndPosition: 0,
 	pressedKeys: new Set(),
 	activatedKeys: new Set(),
-	lastPressed: null,
+	shifted: false,
+	status: constants.UNSHIFTED,
 
 	changeTextareaValue: function (value) {
 		this.textareaValue = value;
@@ -41,7 +42,7 @@ export const state = {
 		return arr.filter(el => el.type === 'shift-left' || el.type === 'alt-left').length ==2;
 	},
 	changeLanguage: function () {
-		this.lang === constants.ENG ? this.lang = constants.RUS : this.lang = constants.ENG;
+		this.lang === constants.ENG ? this.lang = constants.RU : this.lang = constants.ENG;
 		localStorage.setItem('lang', this.lang);
 		this.rerenderKeyboard();
 	},

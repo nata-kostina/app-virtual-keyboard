@@ -1,83 +1,84 @@
-// Row #1 on the keyboard
+// Row #1 on the keyboard key_ru_shifted
+
 export const rowOne = [
-	{ value: '`', type: 'char', valueRus: 'ё' },
-	{ value: '1', type: 'char', valueRus: '1' },
-	{ value: '2', type: 'char', valueRus: '2' },
-	{ value: '3', type: 'char', valueRus: '3' },
-	{ value: '4', type: 'char', valueRus: '4' },
-	{ value: '5', type: 'char', valueRus: '5' },
-	{ value: '6', type: 'char', valueRus: '6' },
-	{ value: '7', type: 'char', valueRus: '7' },
-	{ value: '8', type: 'char', valueRus: '8' },
-	{ value: '9', type: 'char', valueRus: '9' },
-	{ value: '0', type: 'char', valueRus: '0' },
-	{ value: '-', type: 'char', valueRus: '-' },
-	{ value: '=', type: 'char', valueRus: '=' },
-	{ value: '\\', type: 'char', valueRus: '\\' },
-	{ value: 'Backspace', type: 'backspace', valueRus: 'Backspace' }
+	{ key_eng_unshft: '`', type: 'char', key_ru_unshft: 'ё', key_eng_shft: '~', key_ru_shft: 'Ё' },
+	{ key_eng_unshft: '1', type: 'char', key_ru_unshft: '1', key_eng_shft: '!', key_ru_shft: '!' },
+	{ key_eng_unshft: '2', type: 'char', key_ru_unshft: '2', key_eng_shft: '@', key_ru_shft: '"' },
+	{ key_eng_unshft: '3', type: 'char', key_ru_unshft: '3', key_eng_shft: '#', key_ru_shft: '№' },
+	{ key_eng_unshft: '4', type: 'char', key_ru_unshft: '4', key_eng_shft: '$', key_ru_shft: ';' },
+	{ key_eng_unshft: '5', type: 'char', key_ru_unshft: '5', key_eng_shft: '%', key_ru_shft: '%' },
+	{ key_eng_unshft: '6', type: 'char', key_ru_unshft: '6', key_eng_shft: '^', key_ru_shft: ':' },
+	{ key_eng_unshft: '7', type: 'char', key_ru_unshft: '7', key_eng_shft: '&', key_ru_shft: '?' },
+	{ key_eng_unshft: '8', type: 'char', key_ru_unshft: '8', key_eng_shft: '*', key_ru_shft: '*' },
+	{ key_eng_unshft: '9', type: 'char', key_ru_unshft: '9', key_eng_shft: '(', key_ru_shft: '(' },
+	{ key_eng_unshft: '0', type: 'char', key_ru_unshft: '0', key_eng_shft: ')', key_ru_shft: ')' },
+	{ key_eng_unshft: '-', type: 'char', key_ru_unshft: '-', key_eng_shft: '_', key_ru_shft: '_' },
+	{ key_eng_unshft: '=', type: 'char', key_ru_unshft: '=', key_eng_shft: '+', key_ru_shft: '+' },
+	{ key_eng_unshft: '\\', type: 'char',key_ru_unshft: '\\',key_eng_shft: '|', key_ru_shft: '/' },
+	{ key_eng_unshft: 'Backspace', type: 'backspace', key_ru_unshft: 'Backspace', key_eng_shft: 'Backspace', key_ru_shft: 'Backspace'  }
 ];
 
 export const rowTwo = [
-	{ value: 'Tab', type: 'tab', valueRus: 'Tab' },
-	{ value: 'q', type: 'char', valueRus: 'й' },
-	{ value: 'w', type: 'char', valueRus: 'ц' },
-	{ value: 'e', type: 'char', valueRus: 'у' },
-	{ value: 'r', type: 'char', valueRus: 'к' },
-	{ value: 't', type: 'char', valueRus: 'е' },
-	{ value: 'y', type: 'char', valueRus: 'н' },
-	{ value: 'u', type: 'char', valueRus: 'г' },
-	{ value: 'i', type: 'char', valueRus: 'ш' },
-	{ value: 'o', type: 'char', valueRus: 'щ' },
-	{ value: 'p', type: 'char', valueRus: 'з' },
-	{ value: '[', type: 'char', valueRus: 'х' },
-	{ value: ']', type: 'char', valueRus: 'ъ' },
-	{ value: 'Delete', type: 'delete', valueRus: 'Delete' }
+	{ key_eng_unshft: 'Tab', type: 'tab', key_ru_unshft: 'Tab' },
+	{ key_eng_unshft: 'q', type: 'char', key_ru_unshft: 'й' },
+	{ key_eng_unshft: 'w', type: 'char', key_ru_unshft: 'ц' },
+	{ key_eng_unshft: 'e', type: 'char', key_ru_unshft: 'у' },
+	{ key_eng_unshft: 'r', type: 'char', key_ru_unshft: 'к' },
+	{ key_eng_unshft: 't', type: 'char', key_ru_unshft: 'е' },
+	{ key_eng_unshft: 'y', type: 'char', key_ru_unshft: 'н' },
+	{ key_eng_unshft: 'u', type: 'char', key_ru_unshft: 'г' },
+	{ key_eng_unshft: 'i', type: 'char', key_ru_unshft: 'ш' },
+	{ key_eng_unshft: 'o', type: 'char', key_ru_unshft: 'щ' },
+	{ key_eng_unshft: 'p', type: 'char', key_ru_unshft: 'з' },
+	{ key_eng_unshft: '[', type: 'char', key_ru_unshft: 'х', key_eng_shft: '{'  },
+	{ key_eng_unshft: ']', type: 'char', key_ru_unshft: 'ъ', key_eng_shft: '}'  },
+	{ key_eng_unshft: 'Delete', type: 'delete', key_ru_unshft: 'Delete' }
 ];
 
 // Row #3 on the keyboard
 export const rowThree = [
-	{ value: 'CapsLock', type: 'capslock', valueRus: 'CapsLock' },
-	{ value: 'a', type: 'char', valueRus: 'ф' },
-	{ value: 's', type: 'char', valueRus: 'ы' },
-	{ value: 'd', type: 'char', valueRus: 'в' },
-	{ value: 'f', type: 'char', valueRus: 'а' },
-	{ value: 'g', type: 'char', valueRus: 'п' },
-	{ value: 'h', type: 'char', valueRus: 'р' },
-	{ value: 'j', type: 'char', valueRus: 'о' },
-	{ value: 'k', type: 'char', valueRus: 'л' },
-	{ value: 'l', type: 'char', valueRus: 'д' },
-	{ value: ';', type: 'char', valueRus: 'ж' },
-	{ value: '\'', type: 'char', valueRus: 'э' },
-	{ value: 'Enter', type: 'enter', valueRus: 'Enter' }
+	{ key_eng_unshft: 'CapsLock', type: 'capslock', key_ru_unshft: 'CapsLock' },
+	{ key_eng_unshft: 'a', type: 'char', key_ru_unshft: 'ф' },
+	{ key_eng_unshft: 's', type: 'char', key_ru_unshft: 'ы' },
+	{ key_eng_unshft: 'd', type: 'char', key_ru_unshft: 'в' },
+	{ key_eng_unshft: 'f', type: 'char', key_ru_unshft: 'а' },
+	{ key_eng_unshft: 'g', type: 'char', key_ru_unshft: 'п' },
+	{ key_eng_unshft: 'h', type: 'char', key_ru_unshft: 'р' },
+	{ key_eng_unshft: 'j', type: 'char', key_ru_unshft: 'о' },
+	{ key_eng_unshft: 'k', type: 'char', key_ru_unshft: 'л' },
+	{ key_eng_unshft: 'l', type: 'char', key_ru_unshft: 'д' },
+	{ key_eng_unshft: ';', type: 'char', key_ru_unshft: 'ж', key_eng_shft: ':' },
+	{ key_eng_unshft: '\'', type: 'char', key_ru_unshft: 'э', key_eng_shft: '"' },
+	{ key_eng_unshft: 'Enter', type: 'enter', key_ru_unshft: 'Enter' }
 ];
 
 // Row #4 on the keyboard
 export const rowFour = [
-	{ value: 'Shift', type: 'shift-left', valueRus: 'Shift' },
-	{ value: 'z', type: 'char', valueRus: 'я' },
-	{ value: 'x', type: 'char', valueRus: 'ч' },
-	{ value: 'c', type: 'char', valueRus: 'с' },
-	{ value: 'v', type: 'char', valueRus: 'м' },
-	{ value: 'b', type: 'char', valueRus: 'и' },
-	{ value: 'n', type: 'char', valueRus: 'т' },
-	{ value: 'm', type: 'char', valueRus: 'ь' },
-	{ value: ',', type: 'char', valueRus: 'б' },
-	{ value: '.', type: 'char', valueRus: 'ю' },
-	{ value: '/', type: 'char', valueRus: '.' },
-	{ value: '▲', type: 'arrow-up', valueRus: '▲' },
-	{ value: 'Sh', type: 'shift-right', valueRus: 'Sh' }
+	{ key_eng_unshft: 'Shift', type: 'shift-left', key_ru_unshft: 'Shift' },
+	{ key_eng_unshft: 'z', type: 'char', key_ru_unshft: 'я' },
+	{ key_eng_unshft: 'x', type: 'char', key_ru_unshft: 'ч' },
+	{ key_eng_unshft: 'c', type: 'char', key_ru_unshft: 'с' },
+	{ key_eng_unshft: 'v', type: 'char', key_ru_unshft: 'м' },
+	{ key_eng_unshft: 'b', type: 'char', key_ru_unshft: 'и' },
+	{ key_eng_unshft: 'n', type: 'char', key_ru_unshft: 'т' },
+	{ key_eng_unshft: 'm', type: 'char', key_ru_unshft: 'ь' },
+	{ key_eng_unshft: ',', type: 'char', key_ru_unshft: 'б', key_eng_shft: '<'  },
+	{ key_eng_unshft: '.', type: 'char', key_ru_unshft: 'ю', key_eng_shft: '>'  },
+	{ key_eng_unshft: '/', type: 'char', key_ru_unshft: '.', key_eng_shft: '?', key_eng_shft: ','   },
+	{ key_eng_unshft: '▲', type: 'arrow-up', key_ru_unshft: '▲' },
+	{ key_eng_unshft: 'Sh', type: 'shift-right', key_ru_unshft: 'Sh' }
 ];
 
 // Row #5 on the keyboard
 export const rowFive = [
-	{ value: 'Ctrl', type: 'ctrl-left', valueRus: 'Ctrl' },
-	{ value: 'Alt', type: 'alt-left', valueRus: 'Alt' },
-	{ value: '', type: 'space', valueRus: '' },
-	{ value: 'Alt', type: 'alt-right', valueRus: 'Alt' },
-	{ value: 'Ctrl', type: 'ctrl-right', valueRus: 'Ctrl' },
-	{ value: '◄', type: 'arrow-left', valueRus: '◄' },
-	{ value: '▼', type: 'arrow-down', valueRus: '▼' },
-	{ value: '►', type: 'arrow-right', valueRus: '►' },
+	{ key_eng_unshft: 'Ctrl', type: 'ctrl-left', key_ru_unshft: 'Ctrl' },
+	{ key_eng_unshft: 'Alt', type: 'alt-left', key_ru_unshft: 'Alt' },
+	{ key_eng_unshft: '', type: 'space', key_ru_unshft: '' },
+	{ key_eng_unshft: 'Alt', type: 'alt-right', key_ru_unshft: 'Alt' },
+	{ key_eng_unshft: 'Ctrl', type: 'ctrl-right', key_ru_unshft: 'Ctrl' },
+	{ key_eng_unshft: '◄', type: 'arrow-left', key_ru_unshft: '◄' },
+	{ key_eng_unshft: '▼', type: 'arrow-down', key_ru_unshft: '▼' },
+	{ key_eng_unshft: '►', type: 'arrow-right', key_ru_unshft: '►' },
 
 ];
 // Row #1 on the keyboard
@@ -225,9 +226,13 @@ export const rowFive = [
 //languages
 
 export const ENG = 'eng';
-export const RUS = 'ru';
+export const RU = 'ru';
+export const SHIFTED = 'shft';
+export const UNSHIFTED = 'unshft';
 export const body = document.querySelector('body');
 
 export const LOWER = 'lower';
 export const UPPER = 'upper';
-export const rows = [rowOne, rowTwo, rowThree, rowFour, rowFive];
+export const rows = [rowOne
+	, rowTwo, rowThree, rowFour, rowFive
+];

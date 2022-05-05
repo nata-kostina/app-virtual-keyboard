@@ -8,6 +8,7 @@ class App {
 	}
 
 	init() {
+		
 		const layout = new Layout();
 		const keyboard = new Keyboard();
 		const textarea = new Textarea();
@@ -16,7 +17,8 @@ class App {
 		textarea.draw();
 		keyboard.draw();
 
-		keyboard.fillWithKeys();	}
+		keyboard.fillWithKeys();	
+	}
 
 	finish() {
 

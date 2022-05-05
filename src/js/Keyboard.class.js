@@ -1,5 +1,5 @@
 import AbstractElement from './AbstractElement.class';
-import { body, LOWER, rows } from './constants';
+import { body, LOWER, rows,  SHIFTED, UNSHIFTED  } from './constants';
 import Key from './Key.class';
 import { state } from './state';
 class Keyboard extends AbstractElement {
@@ -38,7 +38,7 @@ class Keyboard extends AbstractElement {
 		const keyObj = this.allKeys.find(el => el.DOMelement.dataset.value === key.dataset.value);
 		switch (keyObj.type) {
 			case 'char':
-				this.handleCharInsert(keyObj.DOMelement.dataset.value);
+				this.handleCharInsert(keyObj.displayedValue);
 				break;
 			case 'backspace':
 				this.handleBackspace();
@@ -99,11 +99,14 @@ class Keyboard extends AbstractElement {
 		state.changeCase();
 	}
 	handleShift(keyObj) {
+	
 		if (state.activatedKeys.has(keyObj)) {
-			state.deleteActivatedKey(keyObj)
+			state.status = UNSHIFTED;
+			state.deleteActivatedKey(keyObj);
 			state.changeCase();
 		}
 		else {
+			state.status = SHIFTED;
 			state.addActivatedKey(keyObj);
 			state.changeCase();
 			if (state.checkLangShortcut()) {
