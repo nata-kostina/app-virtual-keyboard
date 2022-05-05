@@ -1,7 +1,7 @@
 // Row #1 on the keyboard key_ru_shifted
 
 export const rowOne = [
-	{ key_eng_unshft: '`', type: 'char', key_ru_unshft: 'ё', key_eng_shft: '~', key_ru_shft: 'Ё' },
+	{ key_eng_unshft: '`', type: 'char', key_ru_unshft: 'ё', key_eng_shft: '~', key_ru_shft: 'Ё', code: 'Backquote' },
 	{ key_eng_unshft: '1', type: 'char', key_ru_unshft: '1', key_eng_shft: '!', key_ru_shft: '!' },
 	{ key_eng_unshft: '2', type: 'char', key_ru_unshft: '2', key_eng_shft: '@', key_ru_shft: '"' },
 	{ key_eng_unshft: '3', type: 'char', key_ru_unshft: '3', key_eng_shft: '#', key_ru_shft: '№' },
@@ -15,7 +15,7 @@ export const rowOne = [
 	{ key_eng_unshft: '-', type: 'char', key_ru_unshft: '-', key_eng_shft: '_', key_ru_shft: '_' },
 	{ key_eng_unshft: '=', type: 'char', key_ru_unshft: '=', key_eng_shft: '+', key_ru_shft: '+' },
 	{ key_eng_unshft: '\\', type: 'char',key_ru_unshft: '\\',key_eng_shft: '|', key_ru_shft: '/' },
-	{ key_eng_unshft: 'Backspace', type: 'backspace', key_ru_unshft: 'Backspace', key_eng_shft: 'Backspace', key_ru_shft: 'Backspace'  }
+	{ key_eng_unshft: 'Backspace', type: 'backspace', code: 'Backspace' }
 ];
 
 export const rowTwo = [
@@ -30,14 +30,14 @@ export const rowTwo = [
 	{ key_eng_unshft: 'i', type: 'char', key_ru_unshft: 'ш' },
 	{ key_eng_unshft: 'o', type: 'char', key_ru_unshft: 'щ' },
 	{ key_eng_unshft: 'p', type: 'char', key_ru_unshft: 'з' },
-	{ key_eng_unshft: '[', type: 'char', key_ru_unshft: 'х', key_eng_shft: '{'  },
-	{ key_eng_unshft: ']', type: 'char', key_ru_unshft: 'ъ', key_eng_shft: '}'  },
-	{ key_eng_unshft: 'Delete', type: 'delete', key_ru_unshft: 'Delete' }
+	{ key_eng_unshft: '[', type: 'char', key_ru_unshft: 'х', key_eng_shft: '{', code: "BracketLeft"  },
+	{ key_eng_unshft: ']', type: 'char', key_ru_unshft: 'ъ', key_eng_shft: '}', code: "BracketRight"  },
+	{ key_eng_unshft: 'Delete', type: 'delete', code: 'Delete' }
 ];
 
 // Row #3 on the keyboard
 export const rowThree = [
-	{ key_eng_unshft: 'CapsLock', type: 'capslock', key_ru_unshft: 'CapsLock' },
+	{ key_eng_unshft: 'CapsLock', type: 'capslock', code: 'CapsLock' },
 	{ key_eng_unshft: 'a', type: 'char', key_ru_unshft: 'ф' },
 	{ key_eng_unshft: 's', type: 'char', key_ru_unshft: 'ы' },
 	{ key_eng_unshft: 'd', type: 'char', key_ru_unshft: 'в' },
@@ -47,14 +47,14 @@ export const rowThree = [
 	{ key_eng_unshft: 'j', type: 'char', key_ru_unshft: 'о' },
 	{ key_eng_unshft: 'k', type: 'char', key_ru_unshft: 'л' },
 	{ key_eng_unshft: 'l', type: 'char', key_ru_unshft: 'д' },
-	{ key_eng_unshft: ';', type: 'char', key_ru_unshft: 'ж', key_eng_shft: ':' },
-	{ key_eng_unshft: '\'', type: 'char', key_ru_unshft: 'э', key_eng_shft: '"' },
-	{ key_eng_unshft: 'Enter', type: 'enter', key_ru_unshft: 'Enter' }
+	{ key_eng_unshft: ';', type: 'char', key_ru_unshft: 'ж', key_eng_shft: ':', code: 'Semicolon' },
+	{ key_eng_unshft: '\'', type: 'char', key_ru_unshft: 'э', key_eng_shft: '"', code: 'Quote' },
+	{ key_eng_unshft: 'Enter', type: 'enter', code: 'Enter' }
 ];
 
 // Row #4 on the keyboard
 export const rowFour = [
-	{ key_eng_unshft: 'Shift', type: 'shift-left', key_ru_unshft: 'Shift' },
+	{ key_eng_unshft: 'Shift', type: 'shift-left', code: 'ShiftLeft' },
 	{ key_eng_unshft: 'z', type: 'char', key_ru_unshft: 'я' },
 	{ key_eng_unshft: 'x', type: 'char', key_ru_unshft: 'ч' },
 	{ key_eng_unshft: 'c', type: 'char', key_ru_unshft: 'с' },
@@ -62,23 +62,23 @@ export const rowFour = [
 	{ key_eng_unshft: 'b', type: 'char', key_ru_unshft: 'и' },
 	{ key_eng_unshft: 'n', type: 'char', key_ru_unshft: 'т' },
 	{ key_eng_unshft: 'm', type: 'char', key_ru_unshft: 'ь' },
-	{ key_eng_unshft: ',', type: 'char', key_ru_unshft: 'б', key_eng_shft: '<'  },
+	{ key_eng_unshft: ',', type: 'char', key_ru_unshft: 'б', key_eng_shft: '<', code: 'Comma'  },
 	{ key_eng_unshft: '.', type: 'char', key_ru_unshft: 'ю', key_eng_shft: '>'  },
 	{ key_eng_unshft: '/', type: 'char', key_ru_unshft: '.', key_eng_shft: '?', key_eng_shft: ','   },
-	{ key_eng_unshft: '▲', type: 'arrow-up', key_ru_unshft: '▲' },
-	{ key_eng_unshft: 'Sh', type: 'shift-right', key_ru_unshft: 'Sh' }
+	{ key_eng_unshft: '▲', type: 'arrow-up', code: 'ArrowUp' },
+	{ key_eng_unshft: 'Sh', type: 'shift-right', code: 'ShiftRight' }
 ];
 
 // Row #5 on the keyboard
 export const rowFive = [
-	{ key_eng_unshft: 'Ctrl', type: 'ctrl-left', key_ru_unshft: 'Ctrl' },
-	{ key_eng_unshft: 'Alt', type: 'alt-left', key_ru_unshft: 'Alt' },
-	{ key_eng_unshft: '', type: 'space', key_ru_unshft: '' },
-	{ key_eng_unshft: 'Alt', type: 'alt-right', key_ru_unshft: 'Alt' },
-	{ key_eng_unshft: 'Ctrl', type: 'ctrl-right', key_ru_unshft: 'Ctrl' },
-	{ key_eng_unshft: '◄', type: 'arrow-left', key_ru_unshft: '◄' },
-	{ key_eng_unshft: '▼', type: 'arrow-down', key_ru_unshft: '▼' },
-	{ key_eng_unshft: '►', type: 'arrow-right', key_ru_unshft: '►' },
+	{ key_eng_unshft: 'Ctrl', type: 'ctrl-left', code: 'ControlLeft' },
+	{ key_eng_unshft: 'Alt', type: 'alt-left',code: 'AltLeft' },
+	{ key_eng_unshft: '', type: 'space', code: 'Space'},
+	{ key_eng_unshft: 'Alt', type: 'alt-right', code: 'AltRight' },
+	{ key_eng_unshft: 'Ctrl', type: 'ctrl-right', code: 'ControlRight' },
+	{ key_eng_unshft: '◄', type: 'arrow-left', code: 'ArrowLeft'},
+	{ key_eng_unshft: '▼', type: 'arrow-down', code: 'ArrowDown' },
+	{ key_eng_unshft: '►', type: 'arrow-right', code: 'ArrowRight' },
 
 ];
 // Row #1 on the keyboard
@@ -236,3 +236,6 @@ export const UPPER = 'upper';
 export const rows = [rowOne
 	, rowTwo, rowThree, rowFour, rowFive
 ];
+
+
+export const activatable = ['CapsLock', 'ShiftLeft', 'ShiftRight', 'ControlLeft', 'ControlRight', 'AltLeft', 'AltRight'] ;

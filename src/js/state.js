@@ -47,13 +47,9 @@ export const state = {
 		this.rerenderKeyboard();
 	},
 
-	rerenderTextarea: function (value) {
+	rerenderTextarea: function (value) {},
 
-	},
-
-	rerenderKeyboard: function () {
-
-	},
+	rerenderKeyboard: function () {},
 
 	subscribe: function (observer) {
 		switch (observer.type) {

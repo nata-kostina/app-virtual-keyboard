@@ -1,5 +1,5 @@
 import AbstractElement from './AbstractElement.class';
-import { body, LOWER, ENG, SHIFTED, UNSHIFTED } from './constants';
+import { body, LOWER, ENG, SHIFTED, UNSHIFTED, activatable } from './constants';
 import { state } from './state';
 
 class Key extends AbstractElement {
@@ -7,12 +7,14 @@ class Key extends AbstractElement {
 		super()
 
 		this.key_eng_unshft = options['key_eng_unshft'];
-		this.key_ru_unshft = options['key_ru_unshft'];
-		this.key_eng_shft = options['key_eng_shft'] || options['key_eng_unshft'];
-		this.key_ru_shft = options['key_ru_shft'] || options['key_ru_unshft'];
+		this.key_ru_unshft = options['key_ru_unshft'] || this.key_eng_unshft;
+		this.key_eng_shft = options['key_eng_shft'] || this.key_eng_unshft;
+		this.key_ru_shft = options['key_ru_shft'] || this.key_ru_unshft;
 
-		this.displayedValue = options[`key_${state.lang}_${state.status}`];
-		
+		this.displayedValue = this[`key_${state.lang}_${state.status}`];
+
+		this.code = options['code'] || `Key${this.key_eng_unshft.toUpperCase()}`;
+
 		this.type = options.type;
 		if (this.type === 'char') {
 			state.case === LOWER ? this.displayedValue = this.displayedValue.toLowerCase() : this.displayedValue = this.displayedValue.toUpperCase();
@@ -20,8 +22,8 @@ class Key extends AbstractElement {
 		this.DOMelement = this.createElement({ tag: 'button', value: this.displayedValue });
 		this.DOMelement.classList.add('key');
 
-		if (state.activatedKeys.has(this)) { this.DOMelement.classList.add('active');};
-		this.addDataAttributes(this.DOMelement, { type: 'value', value:this.displayedValue });
+		if ((this.type in activatable) && state.activatedKeys.has(this)) { this.DOMelement.classList.add('active'); };
+		this.addDataAttributes(this.DOMelement, { type: 'value', value: this.displayedValue });
 		this.addDataAttributes(this.DOMelement, { type: 'type', value: this.type });
 	}
 
@@ -35,8 +37,6 @@ class Key extends AbstractElement {
 	rerenderKey() {
 		//debugger
 		this.DOMelement.innerHTML = '';
-		
-		console.log(`key_${state.lang}_${state.status}`);
 		this.displayedValue = this[`key_${state.lang}_${state.status}`];
 
 		if (this.type === 'char') {
@@ -45,9 +45,13 @@ class Key extends AbstractElement {
 
 		this.DOMelement.innerHTML = this.displayedValue;
 
-		if (state.activatedKeys.has(this)) { this.addClass(this.DOMelement, 'active') }
+		if (state.activatedKeys.has(this)) {
+			this.DOMelement.classList.add('active')
+		}
 		else
-			if (this.DOMelement.classList.contains('active')) { this.DOMelement.classList.remove('active') };
+			if (this.DOMelement.classList.contains('active')) {
+				this.DOMelement.classList.remove('active')
+			};
 
 	}
 

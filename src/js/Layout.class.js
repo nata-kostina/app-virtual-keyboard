@@ -15,7 +15,10 @@ class Layout extends AbstractElement {
 		
 		`});
 		this.addClass(this.DOMelement, 'main');
-
+		// document.addEventListener('keydown', (event) => {
+		// 	event.preventDefault();
+		// 	console.log('hi')
+		// })
 	}
 
 	draw() {
