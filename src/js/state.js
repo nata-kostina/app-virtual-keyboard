@@ -1,66 +1,72 @@
-import * as constants from './constants.js'
+import * as constants from './constants';
 
-export const state = {
-	lang: localStorage.getItem('lang') || constants.ENG,
-	case: constants.LOWER,
-	textarea: null,
-	textareaValue: '',
-	pointerStartPosition: 0,
-	pointerEndPosition: 0,
-	pressedKeys: new Set(),
-	activatedKeys: new Set(),
-	shifted: false,
-	status: constants.UNSHIFTED,
+const state = {
+  lang: localStorage.getItem('lang') || constants.ENG,
+  case: constants.LOWER,
+  textarea: null,
+  textareaValue: '',
+  pointerStartPosition: 0,
+  pointerEndPosition: 0,
+  pressedKeys: new Set(),
+  activatedKeys: new Set(),
+  shifted: false,
+  status: constants.UNSHIFTED,
 
-	changeTextareaValue: function (value) {
-		this.textareaValue = value;
-		this.pointerPosition = this.textareaValue.length;
-		//console.log(this.pointerPosition);
-		this.rerenderTextarea();
-	},
-	changePointerStartPosition: function (pos) {
-		this.pointerStartPosition = pos;
-		this.rerenderTextarea();
-	},
+  changeTextareaValue(value) {
+    this.textareaValue = value;
+    this.pointerPosition = this.textareaValue.length;
+    // console.log(this.pointerPosition);
+    this.rerenderTextarea();
+  },
+  changePointerStartPosition(pos) {
+    this.pointerStartPosition = pos;
+    this.rerenderTextarea();
+  },
 
-	changeCase: function () {
-		this.case === constants.LOWER ? this.case = constants.UPPER : this.case = constants.LOWER;
-		this.rerenderKeyboard();
-	},
+  changeCase() {
+    if (this.case === constants.LOWER) this.case = constants.UPPER;
+    else this.case = constants.LOWER;
+    this.rerenderKeyboard();
+  },
 
-	addActivatedKey: function (keyObj) {
-		this.activatedKeys.add(keyObj);
-		this.rerenderKeyboard();
-	},
+  addActivatedKey(keyObj) {
+    this.activatedKeys.add(keyObj);
+    this.rerenderKeyboard();
+  },
 
-	deleteActivatedKey: function (keyObj) {
-		this.activatedKeys.delete(keyObj);
-		this.rerenderKeyboard();
-	},
-	checkLangShortcut: function () {
-		let arr = Array.from(this.activatedKeys);
-		return arr.filter(el => el.type === 'shift-left' || el.type === 'alt-left').length ==2;
-	},
-	changeLanguage: function () {
-		this.lang === constants.ENG ? this.lang = constants.RU : this.lang = constants.ENG;
-		localStorage.setItem('lang', this.lang);
-		this.rerenderKeyboard();
-	},
+  deleteActivatedKey(keyObj) {
+    this.activatedKeys.delete(keyObj);
+    this.rerenderKeyboard();
+  },
+  checkLangShortcut() {
+    const arr = Array.from(this.activatedKeys);
+    const shft = arr.find((el) => el.type === 'shift-left');
+    const alt = arr.find((el) => el.type === 'alt-left');
+    return !!((shft && alt));
+  },
+  changeLanguage() {
+    if (this.lang === constants.ENG) this.lang = constants.RU; else this.lang = constants.ENG;
+    localStorage.setItem('lang', this.lang);
+    this.rerenderKeyboard();
+  },
 
-	rerenderTextarea: function (value) {},
+  rerenderTextarea() { },
 
-	rerenderKeyboard: function () {},
+  rerenderKeyboard() { },
 
-	subscribe: function (observer) {
-		switch (observer.type) {
-			case 'rerender-textarea':
-				this.rerenderTextarea = observer.function;
-				break;
+  subscribe(observer) {
+    switch (observer.type) {
+      case 'rerender-textarea':
+        this.rerenderTextarea = observer.function;
+        break;
+      case 'rerender-keyboard':
+        this.rerenderKeyboard = observer.function;
+        break;
+      default:
+        break;
+    }
+  },
 
-			case 'rerender-keyboard':
-				this.rerenderKeyboard = observer.function;
-				break;
-		}
-	}
+};
 
-}
+export default state;

@@ -1,28 +1,27 @@
-import * as constants from './constants.js'
-import { state } from './state.js'
-import Keyboard from './Keyboard.class.js';
-import Layout from './Layout.class.js';
+import state from './state';
+import Keyboard from './Keyboard.class';
+import Layout from './Layout.class';
 import Textarea from './Textarea.class';
+import Footer from './Footer.class';
+
 class App {
-	constructor() {
-	}
+  init() {
+    const layout = new Layout();
+    const keyboard = new Keyboard();
+    const textarea = new Textarea();
+    state.textarea = textarea;
+    layout.draw();
+    textarea.draw();
+    keyboard.draw();
 
-	init() {
-		
-		const layout = new Layout();
-		const keyboard = new Keyboard();
-		const textarea = new Textarea();
-		state.textarea = textarea;
-		layout.draw();
-		textarea.draw();
-		keyboard.draw();
+    keyboard.fillWithKeys();
+    const footer = new Footer();
+    footer.draw();
+  }
 
-		keyboard.fillWithKeys();	
-	}
+  finish() {
 
-	finish() {
-
-	}
+  }
 }
 
 export default App;

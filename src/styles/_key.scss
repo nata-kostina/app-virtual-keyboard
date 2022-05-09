@@ -15,11 +15,12 @@ button {
 
 	font-size: 1.5rem;
 
-	cursor: pointer;
+	
 
 	transition: 0.4s;
 	&:hover {
 		background-color: $color-light-s;
+		cursor: pointer;
 	}
 	&:active {
 		transform: translateY(4px);

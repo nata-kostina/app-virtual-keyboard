@@ -348,15 +348,29 @@ template {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  background-color: #f8f9fa;
 }
 
 h1 {
+  margin: 0;
+  padding: 0;
   font-size: 3rem;
-  color: red;
+  color: #777d74;
 }
 
 p {
-  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.card {
+  padding: 70px;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -366,11 +380,18 @@ p {
   padding: 0px 15px;
 }
 
+.main {
+  margin-top: 40px;
+}
 .main__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 40px 0;
+}
+.main__inner h1 {
+  margin-bottom: 50px;
 }
 
 button {
@@ -385,41 +406,66 @@ button {
   border: 1px solid #089FFF;
   border-radius: 4px;
   font-size: 1.5rem;
-  cursor: pointer;
   transition: 0.4s;
 }
 button:hover {
   background-color: rgba(187, 198, 233, 0.726);
+  cursor: pointer;
 }
 button:active {
   transform: translateY(4px);
 }
+button.pressed {
+  transform: translateY(4px);
+  background-color: #9ffdff;
+}
 
-.key.active:before {
+.key[data-type=shift-left]:before, .key[data-type=shift-left]:after, .key[data-type=shift-right]:before, .key[data-type=shift-right]:after, .key[data-type=capslock]:before, .key[data-type=capslock]:after, .key[data-type=alt-left]:before, .key[data-type=alt-left]:after {
   content: "";
-  width: 15px;
-  height: 15px;
-  background-color: #089FFF;
   border-radius: 50%;
   position: absolute;
+}
+.key[data-type=shift-left]:before, .key[data-type=shift-right]:before, .key[data-type=capslock]:before, .key[data-type=alt-left]:before {
   top: 3px;
   right: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid #089FFF;
+}
+.key[data-type=shift-left]:after, .key[data-type=shift-right]:after, .key[data-type=capslock]:after, .key[data-type=alt-left]:after {
+  top: 8px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(112, 112, 112, 0.8);
+}
+.key[data-type=shift-left].active:after, .key[data-type=shift-right].active:after, .key[data-type=capslock].active:after, .key[data-type=alt-left].active:after {
+  background-color: #9ffdff;
 }
 .key:active {
   transform: translateY(4px);
   background-color: #089fff;
 }
-.key[data-type=arrow] {
+.key[data-type=arrow-left], .key[data-type=arrow-right], .key[data-type=arrow-down], .key[data-type=arrow-up] {
   font-family: "Arial", sans-serif;
+  background-color: rgba(89, 188, 178, 0.5411764706);
 }
-.key[data-type=backspace], .key[data-type=tab], .key[data-type=enter], .key[data-type=capslock], .key[data-type=shift], .key[data-type=space] {
+.key[data-type=arrow-left]:hover, .key[data-type=arrow-right]:hover, .key[data-type=arrow-down]:hover, .key[data-type=arrow-up]:hover {
+  background-color: rgba(187, 198, 233, 0.726);
+}
+.key[data-type=backspace], .key[data-type=tab], .key[data-type=enter], .key[data-type=capslock], .key[data-type=shift-left], .key[data-type=space] {
   flex-grow: 1;
 }
-.key[data-type=tab], .key[data-type=capslock], .key[data-type=shift_left] {
+.key[data-type=tab], .key[data-type=capslock], .key[data-type=shift-left] {
   text-align: left;
 }
-.key[data-type=backspace], .key[data-type=enter], .key[data-type=shift_right] {
+.key[data-type=backspace], .key[data-type=enter], .key[data-type=shift-right] {
   text-align: right;
+}
+.key.pressed {
+  transform: translateY(4px);
+  background-color: #9ffdff;
 }
 
 .keyboard {
@@ -438,10 +484,25 @@ button:active {
 }
 
 .textarea {
-  width: 1000px;
+  width: 1100px;
   margin-bottom: 15px;
   resize: none;
+  font-family: "Arial";
+  font-size: 1.5rem;
 }
 .textarea:focus {
   outline: none !important;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.footer__inner p {
+  padding: 0;
+  margin: 10px;
+  font-size: 1.5rem;
 }
