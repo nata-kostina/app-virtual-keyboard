@@ -1,0 +1,38 @@
+
+
+@font-face {
+   
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	background-color: #f8f9fa;
+}
+
+h1{
+	margin: 0;
+	padding: 0;
+	font-size: 3rem;
+	color: #777d74;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+
+.card {
+padding: 70px;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 0 solid rgba(0,0,0,.125);
+	 border-radius: 5px; 
+	box-shadow: 0 0 1.25rem 0 rgb(0 0 0 / 10%);
+}
